@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoicVision</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h2 class=" logo">VIV</h2>
+        <nav class="navigation">
+            <a href="#" class="active">Home</a>
+            <a href="#">About</a>
+            <a href="#">Sevice</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+    <section class="parallax">
+        <img src="hill1.png" id="hill1">
+        <img src="eyestetix-studio-QNOukv0Jx54-unsplash.jpg" id="hill2">
+        <img src="leaf.png" id="leaf">
+        <h2 id="text">Voice Vision</h2>
+        <img src="plant.png" id="plant">
+    </section>
+
+    <section class = "sec">
+        <h2>YouTube Video Summarization</h2>
+        <p>YouTube video summarization is a process that involves condensing the content of a video into a shorter, more manageable form 
+        while retaining the essential information and key points. This can be useful for viewers who want to quickly understand the main 
+        ideas without watching the entire video.
+        </p>
+        <div class="container">
+            <form id="transcription-form">
+                <input
+                    type="text"
+                    id="youtube-link"
+                    placeholder="Paste your link here"
+                />
+                <button type="button" id="generate-transcription">Generate Transcription</button>
+                <input type="file" id="upload-file" />
+                <button type="button" id="upload-file-button">Upload File</button>
+            </form>
+            <div class="transcription">
+                <h2>Generated Transcription</h2>
+                <textarea
+                    id="transcription-output1" readonly
+                    placeholder="Transcription will appear here"
+                ></textarea>
+            </div>
+            <div class="transcription">
+                <h2>Summary Generated from Pegasus</h2>
+                <textarea
+                    id="transcription-output" readonly
+                    placeholder="Summary Generated from Pegasus Will Appear Here"
+                ></textarea>
+            </div>
+            <div class="summary">
+                <h2>Summary Generated from BART</h2>
+                <div class="summary-box">
+                    <textarea
+                        id="summary-output" readonly
+                        placeholder="Summary Generated from BART Will Appear Here"
+                    ></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="loading-bar" id="loading-bar"></div>
+    </section>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
